@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div id="indexContent">
+	<p align="center"><a href="/"><img src="/static/gdis.png"></a></p>
+        <p align="center"><label>&nbsp;</label></p>
+
+        </td><td>
+        <form action="/input" method="post">
+            <select class="select" name="input" onChange="this.form.submit();">
+                <option value="" disabled selected >Input Select &nbsp; &nbsp; {{ input }}</option>
+                <option value="S1">Optical</option>
+                <option value="S2">Coaxial</option>
+                <option value="i2s">Streamer</option>
+                <option value="auto">Auto Select</option>
+            </select>
+        </form>
+        </td></tr></table> &nbsp;
+
+         <p align="center"><label>&nbsp;</label></p>
+         <p align="center"><label>&nbsp;</label></p>
+         <p align="center"><label>&nbsp;</label></p>
+         <form method="POST" action="volume">
+         <p align="center"><input class="slider" value='{{ vol }}' type="range" id="a" name="a" min="0" max="128" style="width: 70%; direction: rtl;" oninput="c.value=a.value" onChange="this.form.submit();">
+	 <output >-{{ vol }}db</output>
+         </form>
+
+        <p align="center"><label>&nbsp;</label></p>
+        <p align="center"><label>&nbsp;</label></p>
+        <p align="center"><label>&nbsp;</label></p>
+        <p align="center"><a href="{{ url_for('power') }}"><img src="/static/power.png"></img></a></p>
+        <p align="center"><font color="gray">GDis Smartdac  ver 1.1</font>
+    </form>
+  </div>
+{% endblock %}
