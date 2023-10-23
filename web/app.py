@@ -41,7 +41,7 @@ def input():
     if input == "i2s":
          os.system('systemctl stop autospdif')
          os.system('i2cset -y 1 0x48 1 0xc0')
-         os.system('echo "(streamer)" > input')
+         os.system('echo "(streamer)" > /root/web/input')
     if input == "auto":
          os.system('systemctl start autospdif')
          os.system('echo "(auto select)" > /root/web/input')
