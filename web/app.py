@@ -29,21 +29,21 @@ def volume():
 def input():
     input = request.form["input"]
     if input == "S1":
-         os.system('systemctl stop autospdif')
+         os.system('systemctl stop autoinput')
          os.system('i2cset -y 1 0x48 1 0xc1')
          os.system('echo 0 >/sys/class/gpio/gpio65/value')
          os.system('echo "(optical)" > /root/web/input')
     if input == "S2":
-         os.system('systemctl stop autospdif')
+         os.system('systemctl stop autoinput')
          os.system('i2cset -y 1 0x48 1 0xc1')
          os.system('echo 1 >/sys/class/gpio/gpio65/value')
          os.system('echo "(coaxial)" > /root/web/input')
     if input == "i2s":
-         os.system('systemctl stop autospdif')
+         os.system('systemctl stop autoinput')
          os.system('i2cset -y 1 0x48 1 0xc0')
          os.system('echo "(streamer)" > /root/web/input')
     if input == "auto":
-         os.system('systemctl start autospdif')
+         os.system('systemctl start autoinput')
          os.system('echo "(auto select)" > /root/web/input')
     return redirect('/')
 
