@@ -1,0 +1,11 @@
+[Unit]
+Description=Autoselect service
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=bash /root/web/autoselect
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
