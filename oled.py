@@ -4,11 +4,11 @@ from luma.core.render import canvas
 from time import sleep
 from datetime import datetime
 from PIL import ImageFont
+from alsaaudio import Mixer
 import smbus
 import time
 import os.path
 import subprocess
-from alsaaudio import Mixer
 
 serial = i2c(port=1, address=0x3C)
 device = sh1106(serial)
