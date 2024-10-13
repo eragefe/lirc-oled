@@ -25,19 +25,19 @@ while True:
 		with canvas(device) as draw:
 			FontTemp = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",10)
 			draw.text((25, 0), str(eth), font=FontTemp, fill="white")
-			FontTemp = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf",50)
+			FontTemp = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",50)
 			draw.text((35, 15), str(vol2), font=FontTemp, fill="white")
 	elif vol2 == 100:
 		with canvas(device) as draw:
 			FontTemp = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",10)
 			draw.text((25, 0), str(eth), font=FontTemp, fill="white")
-			FontTemp = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",40)
-			draw.text((30, 15), str("max"), font=FontTemp, fill="white")
+			FontTemp = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",50)
+			draw.text((35, 15), str("99"), font=FontTemp, fill="white")
 	elif vol2 <10:
 		with canvas(device) as draw:
 			FontTemp = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",10)
 			draw.text((25, 0), str(eth), font=FontTemp, fill="white")
-			FontTemp = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf",50)
+			FontTemp = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",50)
 			draw.text((45, 15), str(vol2), font=FontTemp, fill="white")
 
 sleep(0.5)
