@@ -17,27 +17,27 @@ bus = smbus.SMBus(1)
 while True:
 	eth = os.popen('hostname -I').read().strip()
 	vol = Mixer('Headphone').getvolume()
-	vol2 = int(vol[0])
+	vol = int(vol[0])
 	#time = datetime.now().strftime("%H:%M")
 	#date = datetime.now().strftime("%d/%m/%y")
 
-	if vol2 < 100 and vol2 > 9:
+	if vol < 100 and vol > 9:
 		with canvas(device) as draw:
 			FontTemp = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",10)
 			draw.text((25, 0), str(eth), font=FontTemp, fill="white")
 			FontTemp = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",50)
-			draw.text((35, 15), str(vol2), font=FontTemp, fill="white")
-	elif vol2 == 100:
+			draw.text((35, 15), str(vol), font=FontTemp, fill="white")
+	elif vol == 100:
 		with canvas(device) as draw:
 			FontTemp = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",10)
 			draw.text((25, 0), str(eth), font=FontTemp, fill="white")
 			FontTemp = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",50)
 			draw.text((35, 15), str("99"), font=FontTemp, fill="white")
-	elif vol2 <10:
+	elif vol <10:
 		with canvas(device) as draw:
 			FontTemp = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",10)
 			draw.text((25, 0), str(eth), font=FontTemp, fill="white")
 			FontTemp = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",50)
-			draw.text((45, 15), str(vol2), font=FontTemp, fill="white")
+			draw.text((45, 15), str(vol), font=FontTemp, fill="white")
 
 sleep(0.5)
