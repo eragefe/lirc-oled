@@ -21,20 +21,20 @@
     begin
         prog   = irexec
         button = KEY_RIGHT
-        config = python3 /root/oledoff.py
-        config = systemctl restart oled
+        config = 
     end
 
     begin
         prog   = irexec
         button = KEY_OK
-        config = 
+        config =
     end
 
     begin
         prog   = irexec
         button = KEY_PLAY
-        config = 
+        config = python3 /root/oledoff.py
+        config = systemctl restart oled 
     end
 
     begin
