@@ -17,3 +17,5 @@ sudo pip3 install psutil
 sudo pip3 install feedparser
 
 sudo pip3 install luma.oled
+
+enable i2c-1
