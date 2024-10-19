@@ -6,4 +6,10 @@ add  dtoverlay=gpio-ir,gpio_pin=17
 
 /etc/rc.local
 
-add  irexec > /dev/null &
+install oled
+
+//luma.oled and dependencies
+sudo apt-get install python3-dev
+sudo pip3 install psutil
+sudo pip3 install feedparser
+sudo pip3 install luma.oled
