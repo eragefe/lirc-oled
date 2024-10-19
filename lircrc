@@ -21,7 +21,7 @@
     begin
         prog   = irexec
         button = KEY_RIGHT
-        config = python3 /root/dispoff.py
+        config = python3 /root/oledoff.py
         config = systemctl restart oled
     end
 
