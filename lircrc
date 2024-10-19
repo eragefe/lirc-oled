@@ -2,7 +2,6 @@
         prog   = irexec
         button = KEY_UP
         config = amixer set Headphone 1+
-        delay  = 1
         repeat = 1
     end
 
@@ -10,40 +9,35 @@
         prog   = irexec
         button = KEY_DOWN
         config = amixer set Headphone 1-
-        delay  = 1
         repeat = 1
     end
 
     begin
         prog   = irexec
         button = KEY_LEFT
-        config = mpc previous
+        config = 
     end
 
     begin
         prog   = irexec
         button = KEY_RIGHT
-        config = mpc next
+        config = 
     end
 
     begin
         prog   = irexec
         button = KEY_OK
-        config = python /root/pi3/coaxial.py
-        config = python /root/pi3/optical.py
-        delay  = 2
+        config = 
     end
 
     begin
         prog   = irexec
         button = KEY_PLAY
-        config = mpc toggle
+        config = 
     end
 
     begin
         prog   = irexec
         button = KEY_MENU
-        config = echo 0 >/sys/class/gpio/gpio22/value
-        config = echo 1 >/sys/class/gpio/gpio22/value
-        delay  = 2
+        config = 
     end
