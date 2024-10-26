@@ -39,7 +39,7 @@ struct i_sabre_codec_priv {
 /* I-Sabre Q2M Codec Default Register Value */
 static const struct reg_default i_sabre_codec_reg_defaults[] = {
 	{ ISABRECODEC_REG_10, 0x00 },
-  { ISABRECODEC_REG_15, 0x00 },
+        { ISABRECODEC_REG_15, 0x00 },
 	{ ISABRECODEC_REG_20, 0x00 },
 	{ ISABRECODEC_REG_21, 0x00 },
 	{ ISABRECODEC_REG_22, 0x00 },
@@ -51,7 +51,7 @@ static bool i_sabre_codec_writeable(struct device *dev, unsigned int reg)
 {
 	switch (reg) {
 	case ISABRECODEC_REG_10:
-  case ISABRECODEC_REG_15:
+        case ISABRECODEC_REG_15:
 	case ISABRECODEC_REG_20:
 	case ISABRECODEC_REG_21:
 	case ISABRECODEC_REG_22:
@@ -68,7 +68,7 @@ static bool i_sabre_codec_readable(struct device *dev, unsigned int reg)
 	switch (reg) {
 	case ISABRECODEC_REG_01:
 	case ISABRECODEC_REG_02:
-  case ISABRECODEC_REG_10:
+        case ISABRECODEC_REG_10:
 	case ISABRECODEC_REG_15:
 	case ISABRECODEC_REG_20:
 	case ISABRECODEC_REG_21:
