@@ -1,0 +1,8 @@
+#!/bin/sh
+
+vol=$( { i2cget -y 1 0x48 15; } 2>&1 )
+vol=${vol:2}
+volume=$(printf "%d\n" "0x"$( echo $vol ))
+volume=`expr $volume + 1`
+i2cset -y 1 0x48 15 $volume
+i2cset -y 1 0x48 16 $volume
